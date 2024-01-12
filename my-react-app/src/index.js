@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import Car from './Car.js'
-import CadastroFormulario from './CadastroFormulario.js';
+import Car from './Car.js'
+//import CadastroFormulario from './CadastroFormulario.js';
 
 //const myFirstElement = <h1>Hello Word!</h1>
 
@@ -38,15 +38,15 @@ import CadastroFormulario from './CadastroFormulario.js';
 //     return <h2>I am a {props.color} Car!</h2>;
 //   }
 // //Components inside
-//   function Garage() {
-//     return (
-//       <>
-//         <h1>Who lives in my Garage?</h1>
-//         <Car color="black"/>
-//       </>
-//     );
-//   }
-
+  function Garage() {
+    return (
+      <>
+        <h1>Who lives in my Garage?</h1>
+        <Car brand={ carInfo }/>
+      </>
+    );
+  }
+const carInfo = { name: "Ford", model: "Mustang" };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<CadastroFormulario />);
+root.render(<Garage />);
